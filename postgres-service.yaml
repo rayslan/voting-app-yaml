@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
  name: postgres-service
- label:
+ labels:
   name: postgres-service
   team: rus
 
@@ -11,6 +11,5 @@ spec:
  - port: 5432
    targetPort: 5432
  selector:
-  matchLabels:
-   name: postgres-pod
-   team: rus
+  name: postgres-pod
+  team: rus

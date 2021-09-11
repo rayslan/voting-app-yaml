@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
  name: result-service
- label:
+ labels:
   name: result-service
   team: rus
 
@@ -12,6 +12,5 @@ spec:
  - port: 80
    targetPort: 80
  selector:
-  matchLabels:
-   name: result_app-pod
+   name: result-app-pod
    team: rus
