@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: result-service
+ label:
+  name: result-service
+  team: rus
+
+spec:
+ type: LoadBalancer
+ ports:
+ - port: 80
+   targetPort: 80
+ selector:
+  matchLabels:
+   name: result_app-pod
+   team: rus
